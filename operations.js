@@ -8,7 +8,7 @@ exports.findDocuments = (db, collection) => {
 	return coll.find({}).toArray();
 };
 
-exports.removeDocument = (db, document, callback) => {
+exports.removeDocument = (db, document, collection) => {
 	const coll = db.collection(collection);
 	return coll.deleteOne(document);
 };

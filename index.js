@@ -1,3 +1,7 @@
+const dboper = require('./operations');
+const url = 'mongodb://localhost:27017/';
+const dbname = 'nucampsite';
+const MongoClient = require('mongodb').MongoClient;
 MongoClient.connect(url, { useUnifiedTopology: true })
 	.then((client) => {
 		console.log('Connected correctly to server');
